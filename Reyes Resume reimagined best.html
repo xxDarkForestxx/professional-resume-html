@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Antonio Dion Reyes Jr. - Resume</title>
+
+  <style>
+    /* ==================== BASE STYLES ==================== */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9fb;
+      color: #1a1a1a;
+      line-height: 1.5;
+      font-size: 11pt;
+    }
+
+    .container {
+      max-width: 8.5in;
+      margin: 0 auto;
+      background: white;
+      padding: 0.7in;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      color: #2c3e50;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      text-align: center;
+      border-bottom: 3px solid #2c3e50;
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 4px;
+      margin: 1.2rem 0 0.6rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    ul {
+      margin: 0.4rem 0;
+      padding-left: 1.3rem;
+    }
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    /* HEADER LINES */
+    .contact, .links {
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .links a {
+      margin: 0 8px;
+    }
+
+    /* ==================== CERTIFICATIONS ==================== */
+    .certifications {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin: 1rem 0;
+      flex-wrap: nowrap;
+    }
+
+    .cert-column {
+      flex: 1;
+      min-width: 100px;
+      padding: 0 0.4rem;
+      border-right: 1px solid #ddd;
+    }
+
+    .cert-column:last-child {
+      border-right: none;
+    }
+
+    .cert-column h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+      text-align: center;
+    }
+
+    .cert-column ul {
+      font-size: 0.85rem;
+      padding-left: 1rem;
+      margin: 0;
+    }
+
+    /* ==================== TECHNICAL SKILLS ==================== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    /* tighten Technical Skills spacing ONLY */
+    .skills-grid p {
+      margin: 3px 0 !important;
+    }
+
+    /* ==================== PROJECTS ==================== */
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 0.8rem;
+    }
+
+    .project {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 0.7rem;
+      background: #f8f9fa;
+    }
+
+    .project h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ==================== EXPERIENCE ==================== */
+    .job {
+      margin-bottom: 1rem;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 0.3rem;
+    }
+
+    .job-title {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .job-date {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+    }
+
+    /* ===========================================================
+       PRINT STYLES (no giant gaps, Experience starts on page 2)
+       =========================================================== */
+    @media print {
+
+      @page {
+        size: letter;
+        margin: 0.6in;
+      }
+
+      body {
+        background: white;
+        font-size: 10pt;
+        line-height: 1.35;
+        print-color-adjust: exact;
+      }
+
+      .container {
+        box-shadow: none;
+        padding: 0;
+        max-width: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* keep cert row intact */
+      .certifications {
+        page-break-inside: avoid;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+      }
+
+      .cert-column {
+        min-width: 90px;
+      }
+
+      /* allow flow to avoid giant gaps */
+      .job,
+      .project {
+        page-break-inside: auto !important;
+      }
+
+      /* keep 2-column grid layouts in print */
+      .skills-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      .projects {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      /* ===== Force Experience to start on Page 2 cleanly ===== */
+      #professional-experience {
+        page-break-before: always;
+        margin-top: 0.4in !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <h1>Antonio Dion Reyes Jr.</h1>
+    <div class="contact">
+      Lancaster, CA • (661) 936-6130 • Veritate21@msn.com
+    </div>
+    <div class="links">
+      <a href="https://github.com/xxDarkForestxx">GitHub</a> •
+      <a href="https://linkedin.com/in/reyesdantonio">LinkedIn</a>
+    </div>
+
+    <!-- OBJECTIVE -->
+    <section style="margin: 1rem 0;">
+      <strong>OBJECTIVE</strong><br>
+      DoD 8570-compliant veteran with hands-on experience in endpoint security, vulnerability management,
+      and incident response. Seeking to advance JT4’s mission by strengthening system compliance and cybersecurity posture.
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <h2>EDUCATION</h2>
+
+      <strong>Western Governors University</strong>
+      <ul>
+        <li>B.S. Information Technology (In Progress; 4 courses remaining: D281, D282, C773, C769)</li>
+        <li>B.S. Business Administration (2017)</li>
+      </ul>
+
+      <strong>Antelope Valley College</strong>
+      <ul>
+        <li>A.A. Liberal Arts: Math & Sciences (2015)</li>
+      </ul>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="certifications">
+      <div class="cert-column">
+        <h3>COMPTIA</h3>
+        <ul><li>Security+</li><li>Network+</li><li>A+</li></ul>
+      </div>
+      <div class="cert-column">
+        <h3>GOOGLE</h3>
+        <ul><li>Google Cybersecurity Professional Certificate</li></ul>
+      </div>
+      <div class="cert-column">
+        <h3>ITIL</h3>
+        <ul><li>ITIL V4 Foundation Certification</li></ul>
+      </div>
+      <div class="cert-column">
+        <h3>CLOUD</h3>
+        <ul><li>AWS Cloud Foundations (In Progress)</li></ul>
+      </div>
+      <div class="cert-column">
+        <h3>OTHER</h3>
+        <ul><li>LPI Linux Essentials (In Progress)</li></ul>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+      <h2>TECHNICAL SKILLS</h2>
+      <div class="skills-grid">
+        <div>
+          <h3>Security & Compliance:</h3>
+          <p>Tenable, Microsoft Sentinel, Defender for Endpoint, DISA STIGs, RMF awareness, IR workflows.</p>
+        </div>
+        <div>
+          <h3>Systems:</h3>
+          <p>Windows Server, Active Directory, Intune, Endpoint Security, Patch Management.</p>
+        </div>
+        <div>
+          <h3>Scripting & Tools:</h3>
+          <p>Python, Bash, Git, HTML/CSS, JavaScript, Jira, Office 365, Ticketing.</p>
+        </div>
+        <div>
+          <h3>Environments:</h3>
+          <p>Linux, Azure VMs, WSL, Windows Terminal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2>PROJECTS</h2>
+      <div class="projects">
+
+        <div class="project">
+          <h3>NetFix – Windows Network Troubleshooting Tool</h3>
+          <ul>
+            <li>Developed an interactive Python-based automated diagnostic tool and packaged it as a standalone EXE.</li>
+            <li>Available on GitHub</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h3>Resume built with HTML/CSS</h3>
+          <ul>
+            <li>Designed and coded this custom HTML/CSS résumé with responsive & print-optimized styling.</li>
+            <li>Source available on GitHub</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section id="professional-experience">
+      <h2>PROFESSIONAL EXPERIENCE</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Service Desk Technician — Discovery Elementary</div>
+          <div class="job-date">Apr 2024 – Jul 2025</div>
+        </div>
+        <ul>
+          <li>Managed Active Directory accounts and password policies for 760+ endpoints.</li>
+          <li>Resolved WAP issues, ISP outages, and IP conflicts.</li>
+          <li>Investigated malware and phishing attempts to reduce attack surfaces.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Cybersecurity Intern — Skool at the Cyber Range</div>
+          <div class="job-date">Jan 2025 – Present</div>
+        </div>
+        <ul>
+          <li>Performed vulnerability scans (Tenable).</li>
+          <li>Supported RMF-compliance exercises and documentation.</li>
+          <li>Worked with Microsoft Sentinel, Defender, DISA STIGs.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Substitute Teacher — AVUHSD & LANSD</div>
+          <div class="job-date">Apr 2022 – Present</div>
+        </div>
+        <ul>
+          <li>Delivered STEM and general instruction to diverse student groups.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Office Manager — American Plumbing Co.</div>
+          <div class="job-date">2018 – Jun 2021</div>
+        </div>
+        <ul>
+          <li>Managed payroll, scheduling, IT/software procurement.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Petty Officer 2nd Class (E-5) — U.S. Navy Reserves</div>
+          <div class="job-date">Jun 2013 – Jun 2021</div>
+        </div>
+        <ul>
+          <li>Held Active Secret Clearance (2013–2023).</li>
+          <li>Led medical readiness initiatives achieving 100% compliance.</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </div>
+</body>
+</html>
