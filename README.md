@@ -1,14 +1,14 @@
-\# Antonio Dion Reyes Jr. — Professional Résumé
+\# Antonio Dion Reyes Jr. — Professional Resume
 
 
 
-This repository contains the complete, polished HTML/CSS version of my professional résumé.  
+This repository contains the complete, polished HTML/CSS version of my professional resume.  
 
 It is designed to be \*\*fully print-ready\*\*, \*\*accessible\*\*, and optimized for both \*\*GitHub Pages web viewing\*\* and \*\*PDF export\*\*.
 
 
 
-\## 📄 About This Résumé
+\## 📄 About This resume
 
 
 
@@ -28,7 +28,7 @@ This résumé was custom-built using semantic HTML and carefully structured CSS.
 
 
 
-This résumé is used for applications in:
+This resume is used for applications in:
 
 
 
@@ -76,7 +76,7 @@ Planned structure (future cleanup):
 
 
 
-\## 🌐 Viewing the Résumé
+\## 🌐 Viewing the resume
 
 
 
